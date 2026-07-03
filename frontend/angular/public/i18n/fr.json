@@ -1,0 +1,20 @@
+{
+  "langage": {
+    "french": "Français",
+    "english": "Anglais"
+  },
+  "about": {
+    "title": "A propos"
+  },
+  "stack": {
+    "title": "Stacks",
+    "angular": "Angular",
+    "springboot": "Java Springboot"
+  },
+  "projects": {
+    "title": "Projets"
+  },
+  "contact": {
+    "title": "Contacts"
+  }
+}
