@@ -1,0 +1,7 @@
+FROM docker.io/library/maven:3.9-eclipse-temurin-21
+
+WORKDIR /app
+
+EXPOSE 8081
+
+CMD ["mvn", "quarkus:dev", "-Dquarkus.http.host=0.0.0.0", "-Dquarkus.http.port=8081"]

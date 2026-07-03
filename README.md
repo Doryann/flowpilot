@@ -46,6 +46,15 @@ flowpilot/
 └── README.md
 ```
 
+## Local ports
+
+| Service | URL |
+|---|---|
+| Angular frontend | http://localhost:4200 |
+| Spring Boot backend | http://localhost:8080 |
+| Quarkus backend | http://localhost:8081 |
+| PostgreSQL | localhost:5432 |
+
 ## Run with Docker
 
 Build and start the full local environment:
@@ -64,4 +73,50 @@ Stop all services:
 
 ```bash
 docker compose down
+```
+
+Avoid conflicts:
+```bash
+docker stop flowpilot-postgres
+docker rm flowpilot-postgres
+```
+
+## Run in development mode
+
+For development, FlowPilot provides a dedicated Docker Compose override file:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+```
+
+This mode is intended to run services with live reload when possible.
+
+Currently, the Quarkus backend runs in development mode with hot reload enabled:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build backend-quarkus
+```
+
+When a Java file is modified in:
+
+```text
+backend/quarkus/src/
+```
+
+Quarkus automatically recompiles the application on the next HTTP request.
+
+The development compose file is expected to progressively include the frontend applications as well, so Angular and React can also run with live reload through Docker.
+
+Target development behavior:
+
+```text
+backend/quarkus     → Quarkus dev mode with hot reload
+frontend/angular    → Angular dev server with live reload
+frontend/react      → React dev server with live reload
+```
+
+Stop the development environment:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.dev.yml down --remove-orphans
 ```

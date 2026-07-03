@@ -31,6 +31,17 @@ services:
       postgres:
         condition: service_healthy
 
+  backend-quarkus:
+    build:
+      context: ./backend/quarkus
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      QUARKUS_HTTP_HOST: 0.0.0.0
+      QUARKUS_HTTP_PORT: 8081
+    ports:
+      - "8081:8081"
+
   frontend-angular:
     build:
       context: ./frontend/angular
