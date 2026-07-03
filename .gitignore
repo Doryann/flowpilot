@@ -1,0 +1,143 @@
+
+## .gitignore
+
+```gitignore
+# =========================================================
+# General
+# =========================================================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# =========================================================
+# Environment / secrets
+# =========================================================
+.env
+.env.*
+!.env.example
+*.local
+application-local.yml
+application-local.yaml
+application-local.properties
+application-dev-local.yml
+application-dev-local.yaml
+application-dev-local.properties
+
+# =========================================================
+# IntelliJ / JetBrains
+# =========================================================
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# =========================================================
+# VS Code
+# =========================================================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# =========================================================
+# Java / Maven / Spring Boot
+# =========================================================
+target/
+**/target/
+*.class
+*.jar
+*.war
+*.ear
+
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Keep Maven wrapper files
+!**/mvnw
+!**/mvnw.cmd
+!**/.mvn/wrapper/maven-wrapper.properties
+
+# Spring Boot
+spring.log
+
+# =========================================================
+# Gradle, if added later
+# =========================================================
+.gradle/
+build/
+**/build/
+
+# =========================================================
+# Node / Angular / React
+# =========================================================
+node_modules/
+**/node_modules/
+
+dist/
+**/dist/
+
+.angular/
+**/.angular/
+
+.cache/
+**/.cache/
+
+coverage/
+**/coverage/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================================================
+# Frontend build tools
+# =========================================================
+.vite/
+.next/
+.nuxt/
+.svelte-kit/
+
+# =========================================================
+# Package managers
+# =========================================================
+.pnpm-store/
+.yarn/
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# =========================================================
+# Docker / containers
+# =========================================================
+docker-data/
+postgres-data/
+*.pid
+
+# =========================================================
+# Database
+# =========================================================
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================================================
+# Test reports
+# =========================================================
+surefire-reports/
+failsafe-reports/
+test-results/
+reports/
+
+# =========================================================
+# Generated files
+# =========================================================
+generated/
+**/generated/
+.openapi-generator/
+**/.openapi-generator/
