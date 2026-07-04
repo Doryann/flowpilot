@@ -52,5 +52,16 @@ services:
     depends_on:
       - backend-springboot
 
+  frontend-react:
+    build:
+      context: ./frontend/react
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend-springboot
+      - backend-quarkus
+
 volumes:
   flowpilot-postgres-data:

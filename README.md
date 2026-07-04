@@ -53,6 +53,7 @@ flowpilot/
 | Angular frontend | http://localhost:4200 |
 | Spring Boot backend | http://localhost:8080 |
 | Quarkus backend | http://localhost:8081 |
+| React frontend | http://localhost:5173 |
 | PostgreSQL | localhost:5432 |
 
 ## Run with Docker
@@ -120,3 +121,58 @@ Stop the development environment:
 ```bash
 docker compose -f docker-compose.yml -f docker-compose.dev.yml down --remove-orphans
 ```
+
+## Technologies
+
+FlowPilot is built as a multi-stack full-stack project.
+
+### Frontend
+
+- Angular
+- React
+- TypeScript
+- Tailwind CSS
+- Internationalization
+- Responsive design
+
+### Backend
+
+- Spring Boot
+- Quarkus
+- Java 21
+- REST APIs
+- OpenAPI / Swagger
+- Validation
+- Clean architecture principles
+
+### Database
+
+- PostgreSQL
+
+### Architecture concepts
+
+- MVC
+- Clean architecture
+- CQRS
+- Event-driven architecture
+- API-first development with OpenAPI
+
+### DevOps and tooling
+
+- Docker
+- Docker Compose
+- Podman-compatible setup
+- Maven
+- GitHub
+- GitHub Actions
+- IntelliJ IDEA
+
+### Planned additions
+
+- React frontend implementation
+- Quarkus persistence layer
+- Shared OpenAPI contract generation
+- CI/CD pipeline
+- Automated tests
+- CQRS and event-driven workflows
+- Production-like deployment documentation
