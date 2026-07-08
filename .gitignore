@@ -141,3 +141,6 @@ generated/
 **/generated/
 .openapi-generator/
 **/.openapi-generator/
+
+frontend/angular/src/app/generated/
+frontend/react/src/generated/

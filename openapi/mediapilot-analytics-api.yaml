@@ -1,0 +1,29 @@
+openapi: 3.0.3
+
+info:
+  title: MediaPilot Analytics API
+  version: 1.0.0
+  description: Analytics API for dashboard, statistics and activity feed.
+
+servers:
+  - url: http://localhost:8081
+    description: Local Quarkus backend
+
+tags:
+  - name: Stats
+    description: Media statistics endpoints
+
+paths:
+  /api/stats/summary:
+    get:
+      tags:
+        - Stats
+      operationId: getMediaStatsSummary
+      summary: Get global media statistics
+      responses:
+        '200':
+          description: Media statistics summary
+          content:
+            application/json:
+              schema:
+                $ref: './components/stats-schemas.yaml#/components/schemas/MediaStatsSummaryResponse'

@@ -1,0 +1,81 @@
+components:
+  schemas:
+    MediaResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        type:
+          $ref: '#/components/schemas/MediaType'
+        status:
+          $ref: '#/components/schemas/MediaStatus'
+        platform:
+          type: string
+        releaseYear:
+          type: integer
+          format: int32
+        rating:
+          type: integer
+          format: int32
+          minimum: 0
+          maximum: 10
+        description:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    CreateMediaRequest:
+      type: object
+      required:
+        - title
+        - type
+        - status
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 255
+        type:
+          $ref: '#/components/schemas/MediaType'
+        status:
+          $ref: '#/components/schemas/MediaStatus'
+        platform:
+          type: string
+        releaseYear:
+          type: integer
+          format: int32
+        description:
+          type: string
+
+    ChangeMediaStatusRequest:
+      type: object
+      required:
+        - status
+      properties:
+        status:
+          $ref: '#/components/schemas/MediaStatus'
+
+    MediaType:
+      type: string
+      enum:
+        - GAME
+        - MOVIE
+        - SERIES
+        - ANIME
+        - MUSIC
+        - BOOK
+
+    MediaStatus:
+      type: string
+      enum:
+        - PLANNED
+        - IN_PROGRESS
+        - COMPLETED
+        - DROPPED

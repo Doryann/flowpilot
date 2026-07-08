@@ -1,0 +1,94 @@
+openapi: 3.0.3
+
+info:
+  title: MediaFlow Core API
+  version: 1.0.0
+  description: Core API for managing personal media library items.
+
+servers:
+  - url: http://localhost:8080
+    description: Local Spring Boot backend
+
+tags:
+  - name: Media
+    description: Media management endpoints
+
+paths:
+  /api/media:
+    get:
+      tags:
+        - Media
+      operationId: findAllMedia
+      summary: Find all media
+      responses:
+        '200':
+          description: List of media
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: './components/media-schemas.yaml#/components/schemas/MediaResponse'
+
+    post:
+      tags:
+        - Media
+      operationId: createMedia
+      summary: Create a media item
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './components/media-schemas.yaml#/components/schemas/CreateMediaRequest'
+      responses:
+        '201':
+          description: Media created
+          content:
+            application/json:
+              schema:
+                $ref: './components/media-schemas.yaml#/components/schemas/MediaResponse'
+
+  /api/media/{mediaId}:
+    get:
+      tags:
+        - Media
+      operationId: findMediaById
+      summary: Find media by id
+      parameters:
+        - name: mediaId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Media found
+          content:
+            application/json:
+              schema:
+                $ref: './components/media-schemas.yaml#/components/schemas/MediaResponse'
+
+  /api/media/{mediaId}/status:
+    patch:
+      tags:
+        - Media
+      operationId: changeMediaStatus
+      summary: Change media status
+      parameters:
+        - name: mediaId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './components/media-schemas.yaml#/components/schemas/ChangeMediaStatusRequest'
+      responses:
+        '204':
+          description: Status changed

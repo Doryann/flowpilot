@@ -2,8 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f0c3cd2-ea82-4dc4-be2d-bad7c106f6f1" name="Changes" comment="Init project Add react base">
+      <change afterPath="$PROJECT_DIR$/openapi/components/media-schemas.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openapi/components/stats-schemas.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openapi/mediapilot-analytics-api.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openapi/mediapilot-core-api.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springboot/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springboot/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springboot/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springboot/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springboot/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springboot/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/FlowpilotApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/FlowpilotApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springboot/src/test/java/com/doryann/flowpilot/SandboxApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/test/java/com/doryann/flowpilot/SandboxApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/react/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/react/Dockerfile.dev" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/Dockerfile.dev" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,25 +63,33 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="3Fzf3xx1cO2G8CH1bWn7Eswf1VI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/Doryann/IdeaProjects/flowpilot",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "ts.external.directory.path": "/var/home/Doryann/.local/share/JetBrains/Toolbox/apps/intellij-idea/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/Doryann/IdeaProjects/flowpilot&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Subversion&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/var/home/Doryann/.local/share/JetBrains/Toolbox/apps/intellij-idea/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docker" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="flowpilot" />
@@ -99,6 +132,9 @@
       <workItem from="1783082624548" duration="2919000" />
       <workItem from="1783086226265" duration="5460000" />
       <workItem from="1783155655063" duration="5117000" />
+      <workItem from="1783320455412" duration="2975000" />
+      <workItem from="1783496251999" duration="957000" />
+      <workItem from="1783497215763" duration="9876000" />
     </task>
     <task id="LOCAL-00002" summary="Init project - config dockerfiles">
       <option name="closed" value="true" />
@@ -142,6 +178,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/backend/springboot" />
+      <path value="$PROJECT_DIR$/frontend/angular" />
+    </ignored-roots>
     <MESSAGE value="Init project" />
     <MESSAGE value="Init project - config dockerfiles" />
     <MESSAGE value="Init project - Add quarkus project" />

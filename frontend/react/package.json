@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:api:core": "openapi-generator-cli generate -i ${OPENAPI_DIR:-../../openapi}/mediapilot-core-api.yaml -g typescript-fetch -o src/generated/core-api",
+    "generate:api:analytics": "openapi-generator-cli generate -i ${OPENAPI_DIR:-../../openapi}/mediapilot-analytics-api.yaml -g typescript-fetch -o src/generated/analytics-api",
+    "generate:api": "npm run generate:api:core && npm run generate:api:analytics"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
@@ -17,6 +20,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@openapitools/openapi-generator-cli": "^2.39.1",
     "@types/node": "^24.13.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",

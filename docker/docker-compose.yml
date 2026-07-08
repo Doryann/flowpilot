@@ -18,8 +18,8 @@ services:
 
   backend-springboot:
     build:
-      context: ./backend/springboot
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: backend/springboot/Dockerfile
     restart: unless-stopped
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/flowpilot
@@ -33,8 +33,8 @@ services:
 
   backend-quarkus:
     build:
-      context: ./backend/quarkus
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: backend/quarkus/Dockerfile
     restart: unless-stopped
     environment:
       QUARKUS_HTTP_HOST: 0.0.0.0
@@ -47,16 +47,16 @@ services:
 
   frontend-angular:
     build:
-      context: ./frontend/angular
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: frontend/angular/Dockerfile
     restart: unless-stopped
     ports:
       - "4200:80"
 
   frontend-react:
     build:
-      context: ./frontend/react
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: frontend/react/Dockerfile
     restart: unless-stopped
     ports:
       - "5173:80"

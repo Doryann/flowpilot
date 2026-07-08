@@ -87,7 +87,7 @@ docker rm flowpilot-postgres
 For development, FlowPilot provides a dedicated Docker Compose override file:
 
 ```bash
-docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+docker compose -f docker/docker-compose.yml -f docker/docker-compose.dev.yml up --build
 ```
 
 This mode is intended to run services with live reload when possible.
@@ -95,7 +95,7 @@ This mode is intended to run services with live reload when possible.
 Currently, the Quarkus backend runs in development mode with hot reload enabled:
 
 ```bash
-docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build backend-quarkus
+docker compose -f docker/docker-compose.yml -f docker/docker-compose.dev.yml up --build backend-quarkus
 ```
 
 When a Java file is modified in:
@@ -119,7 +119,7 @@ frontend/react      → React dev server with live reload
 Stop the development environment:
 
 ```bash
-docker compose -f docker-compose.yml -f docker-compose.dev.yml down --remove-orphans
+docker compose -f docker/docker-compose.yml -f docker/docker-compose.dev.yml down --remove-orphans
 ```
 
 ## Technologies

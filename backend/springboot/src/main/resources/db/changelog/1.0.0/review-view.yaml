@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: review-view-create-table
+      author: Doryann
+      changes:
+        - createTable:
+            tableName: review_view
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: media_id
+                  type: uuid
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: rating
+                  type: int
+
+              - column:
+                  name: content
+                  type: varchar(1024)
+
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: updated_at
+                  type: timestamp
+
+        - addForeignKeyConstraint:
+            - baseTableName: review_view
+            - baseColumnNames: media_id
+            - constraintName: fk_media_id
+            - referencedTableName: media_view
+            - referencedColumnNames: id

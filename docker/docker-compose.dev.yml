@@ -1,0 +1,46 @@
+services:
+  backend-quarkus:
+    build:
+      context: ..
+      dockerfile: ../backend/quarkus/Dockerfile.dev
+    volumes:
+      - ../backend/quarkus:/app:Z
+      - quarkus-maven-cache:/root/.m2
+    ports:
+      - "8081:8081"
+    environment:
+      QUARKUS_HTTP_HOST: 0.0.0.0
+      QUARKUS_HTTP_PORT: 8081
+
+  frontend-angular:
+    build:
+      context: ..
+      dockerfile: frontend/angular/Dockerfile.dev
+    volumes:
+      - ../frontend/angular:/app:Z
+      - ../openapi:/openapi:Z
+      - angular-node-modules:/app/node_modules
+    environment:
+      OPENAPI_DIR: /openapi
+      CHOKIDAR_USEPOLLING: "true"
+
+  frontend-react:
+    build:
+      context: ..
+      dockerfile: frontend/react/Dockerfile.dev
+    volumes:
+      - ../frontend/react:/app:Z
+      - ../openapi:/openapi:Z
+      - react-node-modules:/app/node_modules
+    environment:
+      OPENAPI_DIR: /openapi
+      CHOKIDAR_USEPOLLING: "true"
+
+volumes:
+  angular-node-modules:
+  react-node-modules:
+
+volumes:
+  quarkus-maven-cache:
+  angular-node-modules:
+  react-node-modules:

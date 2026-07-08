@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id: media-view-create-table
+      author: Doryann
+      changes:
+        - createTable:
+            tableName: media_view
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: media_type
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: status
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: platform
+                  type: varchar(100)
+
+              - column:
+                  name: release_year
+                  type: int
+
+              - column:
+                  name: rating
+                  type: int
+
+              - column:
+                  name: description
+                  type: varchar(2048)
+
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: updated_at
+                  type: timestamp
