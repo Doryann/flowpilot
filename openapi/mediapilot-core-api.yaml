@@ -17,7 +17,7 @@ paths:
   /api/media:
     get:
       tags:
-        - Media
+        - MediaQuery
       operationId: findAllMedia
       summary: Find all media
       responses:
@@ -32,7 +32,7 @@ paths:
 
     post:
       tags:
-        - Media
+        - MediaCommand
       operationId: createMedia
       summary: Create a media item
       requestBody:
@@ -47,21 +47,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: './components/media-schemas.yaml#/components/schemas/MediaResponse'
+                $ref: './components/media-schemas.yaml#/components/schemas/IdentificationResponse'
 
   /api/media/{mediaId}:
     get:
       tags:
-        - Media
+        - MediaQuery
       operationId: findMediaById
       summary: Find media by id
-      parameters:
-        - name: mediaId
-          in: path
-          required: true
-          schema:
-            type: string
-            format: uuid
       responses:
         '200':
           description: Media found
@@ -69,11 +62,46 @@ paths:
             application/json:
               schema:
                 $ref: './components/media-schemas.yaml#/components/schemas/MediaResponse'
+    put:
+      tags:
+        - MediaCommand
+      operationId: updateMedia
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './components/media-schemas.yaml#/components/schemas/CreateMediaRequest'
+      responses:
+        202:
+          description: UPDATED
+          content:
+            application/json:
+              schema:
+                $ref: './components/media-schemas.yaml#/components/schemas/IdentificationResponse'
+    delete:
+      tags:
+        - MediaCommand
+      operationId: deleteMedia
+      responses:
+        200:
+          description: DELETED
+          content:
+            application/json:
+              schema:
+                $ref: './components/media-schemas.yaml#/components/schemas/IdentificationResponse'
+    parameters:
+      - name: mediaId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
 
   /api/media/{mediaId}/status:
     patch:
       tags:
-        - Media
+        - MediaCommand
       operationId: changeMediaStatus
       summary: Change media status
       parameters:
@@ -92,3 +120,26 @@ paths:
       responses:
         '204':
           description: Status changed
+
+  /api/media/{mediaId}/rating:
+    patch:
+      tags:
+        - MediaCommand
+      operationId: changeMediaRating
+      summary: Change media rating
+      parameters:
+        - name: mediaId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './components/media-schemas.yaml#/components/schemas/ChangeMediaRatingRequest'
+      responses:
+        '204':
+          description: Rating changed

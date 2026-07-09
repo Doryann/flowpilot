@@ -31,6 +31,13 @@ components:
           type: string
           format: date-time
 
+    IdentificationResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+
     CreateMediaRequest:
       type: object
       required:
@@ -61,6 +68,17 @@ components:
       properties:
         status:
           $ref: '#/components/schemas/MediaStatus'
+
+    ChangeMediaRatingRequest:
+      type: object
+      required:
+        - status
+      properties:
+        rating:
+          type: integer
+          format: int32
+          minimum: 0
+          maximum: 10
 
     MediaType:
       type: string

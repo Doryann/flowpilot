@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f0c3cd2-ea82-4dc4-be2d-bad7c106f6f1" name="Changes" comment="Init project Add react base">
-      <change afterPath="$PROJECT_DIR$/README_RESTRICTED.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/quarkus/src/main/java/com/doryann/flowpilot/quarkus/AnalyticsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/config/SecurityConfig.java" afterDir="false" />
+    <list default="true" id="7f0c3cd2-ea82-4dc4-be2d-bad7c106f6f1" name="Changes" comment="Init project Add openapi">
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/media/ChangeMediaStatusCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/media/CreateMediaCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/media/DeleteMediaCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/media/RateMediaCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/media/UpdateMediaCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/domain/MediaAggregate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/controller/MediaCommandController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/controller/MediaQueryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/entity/MediaView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaDeletedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaRatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaStatusChangedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaUpdatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/RateMediaEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/mapper/MediaMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/query/api/media/FindAllMediaQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/query/api/media/FindMediaByIdQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/query/handler/MediaQueryHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/query/projection/MediaProjection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/repository/MediaViewRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/quarkus/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/quarkus/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/quarkus/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/quarkus/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/media/web/controller/MediaCommandController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/media/web/controller/MediaQueryController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi/components/media-schemas.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/components/media-schemas.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi/mediapilot-core-api.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/mediapilot-core-api.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +43,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,6 +63,13 @@
     &quot;accountId&quot;: &quot;5b8777de-f04c-43f5-b1e8-1e98378d4d6b&quot;
   }
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -77,7 +103,7 @@
       <recent name="$PROJECT_DIR$/docker" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.FlowpilotApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="flowpilot" />
       <method v="2">
@@ -88,6 +114,52 @@
       <module name="flowpilot" />
       <option name="filePath" />
       <method v="2" />
+    </configuration>
+    <configuration name="quarkus" type="QuarkusRunConfigurationType" factoryName="Quarkus" nameIsGenerated="true">
+      <module name="quarkus" />
+      <QsMavenRunConfiguration>
+        <MavenSettings>
+          <option name="myGeneralSettings" />
+          <option name="myRunnerSettings" />
+          <option name="myRunnerParameters">
+            <MavenRunnerParameters>
+              <option name="cmdOptions" />
+              <option name="profiles">
+                <set />
+              </option>
+              <option name="goals">
+                <list>
+                  <option value="quarkus:dev" />
+                </list>
+              </option>
+              <option name="multimoduleDir" />
+              <option name="pomFileName" value="pom.xml" />
+              <option name="profilesMap">
+                <map />
+              </option>
+              <option name="projectsCmdOptionValues">
+                <list />
+              </option>
+              <option name="resolveToWorkspace" value="false" />
+              <option name="workingDirPath" value="$PROJECT_DIR$/backend/quarkus" />
+            </MavenRunnerParameters>
+          </option>
+        </MavenSettings>
+        <targetMavenLocalRepo />
+        <emulateTerminal>false</emulateTerminal>
+        <profile>dev</profile>
+      </QsMavenRunConfiguration>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlowpilotApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="flowpilot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.doryann.flowpilot.FlowpilotApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
   </component>
   <component name="SharedIndexes">
@@ -123,7 +195,7 @@
       <workItem from="1783496251999" duration="957000" />
       <workItem from="1783497215763" duration="9876000" />
       <workItem from="1783583125405" duration="891000" />
-      <workItem from="1783584612523" duration="9242000" />
+      <workItem from="1783584612523" duration="29284000" />
     </task>
     <task id="LOCAL-00002" summary="Init project - config dockerfiles">
       <option name="closed" value="true" />
@@ -149,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783159587246</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Init project Add openapi">
+      <option name="closed" value="true" />
+      <created>1783595238355</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1783595238355</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +256,8 @@
     <MESSAGE value="Init project - Add quarkus project" />
     <MESSAGE value="Init project Add quarkus project" />
     <MESSAGE value="Init project Add react base" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init project Add react base" />
+    <MESSAGE value="Init project Add openapi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init project Add openapi" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

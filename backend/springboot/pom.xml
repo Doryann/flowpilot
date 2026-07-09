@@ -31,6 +31,8 @@
         <openapi-generator.version>7.23.0</openapi-generator.version>
         <springdoc-openapi.version>3.0.3</springdoc-openapi.version>
         <openapi.input-spec>${project.basedir}/../../openapi/mediapilot-core-api.yaml</openapi.input-spec>
+        <axon.version>4.13.2</axon.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
     </properties>
     <dependencies>
         <dependency>
@@ -91,6 +93,16 @@
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>${springdoc-openapi.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-spring-boot-starter</artifactId>
+            <version>${axon.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -103,6 +115,11 @@
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
+                        </path>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
