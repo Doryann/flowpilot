@@ -37,10 +37,6 @@ services:
       CHOKIDAR_USEPOLLING: "true"
 
 volumes:
-  angular-node-modules:
-  react-node-modules:
-
-volumes:
   quarkus-maven-cache:
   angular-node-modules:
   react-node-modules:

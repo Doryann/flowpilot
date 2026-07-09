@@ -2,31 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f0c3cd2-ea82-4dc4-be2d-bad7c106f6f1" name="Changes" comment="Init project Add react base">
-      <change afterPath="$PROJECT_DIR$/openapi/components/media-schemas.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/openapi/components/stats-schemas.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/openapi/mediapilot-analytics-api.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/openapi/mediapilot-core-api.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README_RESTRICTED.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/quarkus/src/main/java/com/doryann/flowpilot/quarkus/AnalyticsResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/.dockerignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/quarkus/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/quarkus/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/quarkus/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/quarkus/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/FlowpilotApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/FlowpilotApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/test/java/com/doryann/flowpilot/SandboxApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/test/java/com/doryann/flowpilot/SandboxApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose.dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/angular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/react/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/react/Dockerfile.dev" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/Dockerfile.dev" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/react/package.json" afterDir="false" />
     </list>
@@ -55,7 +41,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Doryann/flowpilot.git&quot;,
-    &quot;accountId&quot;: &quot;548dd55e-2d3f-4ec0-847f-39d32b0991ed&quot;
+    &quot;accountId&quot;: &quot;5b8777de-f04c-43f5-b1e8-1e98378d4d6b&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -70,23 +56,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/Doryann/IdeaProjects/flowpilot&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Subversion&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/var/home/Doryann/.local/share/JetBrains/Toolbox/apps/intellij-idea/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/Doryann/IdeaProjects/flowpilot",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dlauro\IdeaProjects\flowpilot" />
       <recent name="$PROJECT_DIR$/docker" />
     </key>
   </component>
@@ -106,8 +93,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
       </set>
     </attachedChunks>
   </component>
@@ -135,6 +122,8 @@
       <workItem from="1783320455412" duration="2975000" />
       <workItem from="1783496251999" duration="957000" />
       <workItem from="1783497215763" duration="9876000" />
+      <workItem from="1783583125405" duration="891000" />
+      <workItem from="1783584612523" duration="9242000" />
     </task>
     <task id="LOCAL-00002" summary="Init project - config dockerfiles">
       <option name="closed" value="true" />
