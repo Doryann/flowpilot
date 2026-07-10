@@ -48,21 +48,6 @@ public class MediaProjection {
     }
 
     @EventHandler
-    public void on(RateMediaEvent event) {
-        log.info("Projecting MediaStatusChangedEvent for mediaId={}", event.getMediaId());
-        int updatedRows = mediaViewRepository.updateRatingById(
-                event.getMediaId(),
-                event.getRating()
-        );
-
-        if (updatedRows == 0) {
-            throw new IllegalStateException(
-                    "MediaView not found for mediaId=" + event.getMediaId()
-            );
-        }
-    }
-
-    @EventHandler
     public void on(MediaDeletedEvent event) {
         log.info("Projecting media deletion for mediaId={}", event.getMediaId());
 

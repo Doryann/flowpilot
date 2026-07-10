@@ -1,0 +1,37 @@
+components:
+  schemas:
+    IdentificationResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+
+    CreateUserBody:
+      type: object
+      properties:
+        username:
+          type: string
+        displayName:
+          type: string
+        email:
+          type: string
+
+    UserDTO:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        username:
+          type: string
+        displayName:
+          type: string
+        email:
+          type: string
+        avatarUrl:
+          type: string
+        createdAt:
+          type: date
+        updatedAt:
+          type: date

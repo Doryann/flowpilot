@@ -38,8 +38,9 @@ databaseChangeLog:
                   type: timestamp
 
         - addForeignKeyConstraint:
-            - baseTableName: review_view
-            - baseColumnNames: media_id
-            - constraintName: fk_media_id
-            - referencedTableName: media_view
-            - referencedColumnNames: id
+             baseTableName: review_view
+             baseColumnNames: media_id
+             constraintName: fk_review_view_media_id
+             referencedTableName: media_view
+             referencedColumnNames: id
+             onDelete: CASCADE

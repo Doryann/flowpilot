@@ -1,0 +1,69 @@
+databaseChangeLog:
+  - changeSet:
+      id: app-user-create-table
+      author: Doryann
+      changes:
+        - createTable:
+            tableName: app_user
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: username
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+                    unique: true
+
+              - column:
+                  name: display_name
+                  type: varchar(150)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+
+              - column:
+                  name: avatar_url
+                  type: varchar(512)
+
+              - column:
+                  name: active
+                  type: boolean
+                  defaultValueBoolean: true
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: updated_at
+                  type: timestamp
+
+        - createIndex:
+            tableName: app_user
+            indexName: idx_app_user_username
+            columns:
+              - column:
+                  name: username
+
+        - createIndex:
+            tableName: app_user
+            indexName: idx_app_user_email
+            columns:
+              - column:
+                  name: email

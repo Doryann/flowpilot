@@ -1,0 +1,36 @@
+components:
+  schemas:
+    CreateReviewRequest:
+      type: object
+      properties:
+        media:
+          $ref: './media-schemas.yaml#/components/schemas/MediaResponse'
+        rating:
+          type: integer
+          format: int32
+          minimum: 0
+          maximum: 10
+        content:
+          type: string
+
+    ReviewResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        media:
+          $ref: './media-schemas.yaml#/components/schemas/MediaResponse'
+        rating:
+          type: integer
+          format: int32
+          minimum: 0
+          maximum: 10
+        content:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time

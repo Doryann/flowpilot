@@ -40,7 +40,11 @@ databaseChangeLog:
                   type: int
 
               - column:
-                  name: rating
+                  name: average_user_rating
+                  type: int
+
+              - column:
+                  name: user_rating_count
                   type: int
 
               - column:

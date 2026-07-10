@@ -1,3 +1,4 @@
 databaseChangeLog:
   - include: { file: db/changelog/1.0.0/media-view.yaml }
   - include: { file: db/changelog/1.0.0/review-view.yaml }
+  - include: { file: db/changelog/1.0.0/create-app-user.yaml }

@@ -17,11 +17,13 @@ components:
         releaseYear:
           type: integer
           format: int32
-        rating:
+        averageUserRating:
           type: integer
           format: int32
           minimum: 0
           maximum: 10
+        userRatingCount:
+          type: integer
         description:
           type: string
         createdAt:
@@ -30,13 +32,6 @@ components:
         updatedAt:
           type: string
           format: date-time
-
-    IdentificationResponse:
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
 
     CreateMediaRequest:
       type: object

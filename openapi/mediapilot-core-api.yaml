@@ -13,6 +13,7 @@ tags:
   - name: Media
     description: Media management endpoints
 
+## MEDIA
 paths:
   /api/media:
     get:
@@ -47,7 +48,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: './components/media-schemas.yaml#/components/schemas/IdentificationResponse'
+                $ref: './components/shared-schemas.yaml#/components/schemas/IdentificationResponse'
 
   /api/media/{mediaId}:
     get:
@@ -78,7 +79,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: './components/media-schemas.yaml#/components/schemas/IdentificationResponse'
+                $ref: './components/shared-schemas.yaml#/components/schemas/IdentificationResponse'
     delete:
       tags:
         - MediaCommand
@@ -89,7 +90,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: './components/media-schemas.yaml#/components/schemas/IdentificationResponse'
+                $ref: './components/shared-schemas.yaml#/components/schemas/IdentificationResponse'
     parameters:
       - name: mediaId
         in: path
@@ -121,25 +122,156 @@ paths:
         '204':
           description: Status changed
 
-  /api/media/{mediaId}/rating:
-    patch:
+## REVIEW
+  /api/review:
+    get:
       tags:
-        - MediaCommand
-      operationId: changeMediaRating
-      summary: Change media rating
-      parameters:
-        - name: mediaId
-          in: path
-          required: true
-          schema:
-            type: string
-            format: uuid
+        - ReviewQuery
+      operationId: findAllReview
+      summary: Find all review
+      responses:
+        '200':
+          description: List of review
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: './components/review-schemas.yaml#/components/schemas/ReviewResponse'
+
+    post:
+      tags:
+        - ReviewCommand
+      operationId: createReview
+      summary: Create a review item
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: './components/media-schemas.yaml#/components/schemas/ChangeMediaRatingRequest'
+              $ref: './components/review-schemas.yaml#/components/schemas/CreateReviewRequest'
       responses:
-        '204':
-          description: Rating changed
+        '201':
+          description: Review created
+          content:
+            application/json:
+              schema:
+                $ref: './components/shared-schemas.yaml#/components/schemas/IdentificationResponse'
+
+  /api/review/{reviewId}:
+    get:
+      tags:
+        - ReviewQuery
+      operationId: findReviewById
+      summary: Find review by id
+      responses:
+        '200':
+          description: Media found
+          content:
+            application/json:
+              schema:
+                $ref: './components/review-schemas.yaml#/components/schemas/ReviewResponse'
+    put:
+      tags:
+        - ReviewCommand
+      operationId: updateReview
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './components/review-schemas.yaml#/components/schemas/CreateReviewRequest'
+      responses:
+        202:
+          description: UPDATED
+          content:
+            application/json:
+              schema:
+                $ref: './components/shared-schemas.yaml#/components/schemas/IdentificationResponse'
+    delete:
+      tags:
+        - ReviewCommand
+      operationId: deleteReview
+      responses:
+        200:
+          description: DELETED
+          content:
+            application/json:
+              schema:
+                $ref: './components/shared-schemas.yaml#/components/schemas/IdentificationResponse'
+    parameters:
+      - name: reviewId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+## USERs
+  /api/user:
+    post:
+      tags:
+        - User
+      operationId: createUser
+      summary: Create a user item
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './components/shared-schemas.yaml#/components/schemas/CreateUserBody'
+      responses:
+        '201':
+          description: User created
+          content:
+            application/json:
+              schema:
+                $ref: './components/shared-schemas.yaml#/components/schemas/IdentificationResponse'
+
+  /api/user/{userId}:
+    get:
+      tags:
+        - User
+      operationId: findUserById
+      summary: Find user by id
+      responses:
+        '200':
+          description: Media found
+          content:
+            application/json:
+              schema:
+                $ref: './components/shared-schemas.yaml#/components/schemas/UserDTO'
+    put:
+      tags:
+        - User
+      operationId: updateUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './components/shared-schemas.yaml#/components/schemas/UserDTO'
+      responses:
+        202:
+          description: UPDATED
+          content:
+            application/json:
+              schema:
+                $ref: './components/shared-schemas.yaml#/components/schemas/IdentificationResponse'
+    delete:
+      tags:
+        - User
+      operationId: deleteUser
+      responses:
+        200:
+          description: DELETED
+          content:
+            application/json:
+              schema:
+                $ref: './components/shared-schemas.yaml#/components/schemas/IdentificationResponse'
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid

@@ -33,18 +33,6 @@ public class MediaCommandController implements MediaCommandApi {
     }
 
     @Override
-    public ResponseEntity<Void> changeMediaRating(
-            UUID mediaId,
-            @Valid ChangeMediaRatingRequest changeMediaRatingRequest
-    ) {
-        log.info("Changing media rating for mediaId={}", mediaId);
-
-        commandGateway.sendAndWait(RateMediaCommand.builder().mediaId(mediaId).rating(changeMediaRatingRequest.getRating()).build());
-
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-    }
-
-    @Override
     public ResponseEntity<IdentificationResponse> createMedia(@Valid CreateMediaRequest createMediaRequest) {
         log.info("Create media {}", createMediaRequest.getTitle());
         UUID mediaId = UUID.randomUUID();

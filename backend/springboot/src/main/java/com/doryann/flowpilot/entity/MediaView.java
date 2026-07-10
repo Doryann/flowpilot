@@ -1,12 +1,13 @@
 package com.doryann.flowpilot.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Getter
@@ -38,9 +39,11 @@ public class MediaView {
     private String description;
 
     private int releaseYear;
-    private int rating;
-    private OffsetDateTime createdAt;
-    private OffsetDateTime updatedAt;
+    private int averageUserRating;
+    private int userRatingCount;
+    @Column(nullable = false)
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
 
 }

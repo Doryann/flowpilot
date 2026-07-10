@@ -21,7 +21,6 @@ public class MediaAggregate {
     MediaType type;
     MediaStatus status;
     String platform;
-    int rating;
     int releaseYear;
     String description;
     private boolean deleted;
@@ -89,17 +88,6 @@ public class MediaAggregate {
     @EventSourcingHandler
     public void on(MediaStatusChangedEvent event) {
         this.status = event.getStatus();
-    }
-
-    /** Update media rating */
-    @CommandHandler
-    public void handle(RateMediaCommand command) {
-        AggregateLifecycle.apply(RateMediaEvent.builder().mediaId(command.getMediaId()).rating(command.getRating()).build());
-    }
-
-    @EventSourcingHandler
-    public void on(RateMediaEvent event) {
-        this.rating = event.getRating();
     }
 
     /** Delete media */
