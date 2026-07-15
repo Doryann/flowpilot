@@ -207,71 +207,48 @@ paths:
           type: string
           format: uuid
 ## USERs
-  /api/user:
-    post:
+  /api/users/me:
+    get:
       tags:
         - User
-      operationId: createUser
-      summary: Create a user item
+      operationId: findCurrentUser
+      summary: Find current authenticated user
+      responses:
+        '200':
+          description: Current user found
+          content:
+            application/json:
+              schema:
+                $ref: './components/shared-schemas.yaml#/components/schemas/UserDTO'
+
+    put:
+      tags:
+        - User
+      operationId: updateCurrentUser
+      summary: Update current authenticated user profile
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: './components/shared-schemas.yaml#/components/schemas/CreateUserBody'
+              $ref: './components/shared-schemas.yaml#/components/schemas/UpdateUserProfileRequest'
       responses:
-        '201':
-          description: User created
+        '200':
+          description: Current user updated
           content:
             application/json:
               schema:
                 $ref: './components/shared-schemas.yaml#/components/schemas/IdentificationResponse'
 
-  /api/user/{userId}:
-    get:
-      tags:
-        - User
-      operationId: findUserById
-      summary: Find user by id
-      responses:
-        '200':
-          description: Media found
-          content:
-            application/json:
-              schema:
-                $ref: './components/shared-schemas.yaml#/components/schemas/UserDTO'
-    put:
-      tags:
-        - User
-      operationId: updateUser
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: './components/shared-schemas.yaml#/components/schemas/UserDTO'
-      responses:
-        202:
-          description: UPDATED
-          content:
-            application/json:
-              schema:
-                $ref: './components/shared-schemas.yaml#/components/schemas/IdentificationResponse'
     delete:
       tags:
         - User
-      operationId: deleteUser
+      operationId: deleteCurrentUser
+      summary: Deactivate current authenticated user
       responses:
-        200:
-          description: DELETED
+        '200':
+          description: Current user deactivated
           content:
             application/json:
               schema:
                 $ref: './components/shared-schemas.yaml#/components/schemas/IdentificationResponse'
-    parameters:
-      - name: userId
-        in: path
-        required: true
-        schema:
-          type: string
-          format: uuid

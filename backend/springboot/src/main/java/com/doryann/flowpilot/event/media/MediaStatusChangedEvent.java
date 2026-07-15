@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Value;
 
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Builder
@@ -12,5 +13,10 @@ import java.util.UUID;
 public class MediaStatusChangedEvent {
     @NotNull
     UUID mediaId;
+
+    @NotNull
     MediaStatus status;
+
+    @NotNull
+    OffsetDateTime updatedAt;
 }

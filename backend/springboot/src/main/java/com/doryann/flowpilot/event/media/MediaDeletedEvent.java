@@ -4,6 +4,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Value;
 
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Builder
@@ -11,4 +12,7 @@ import java.util.UUID;
 public class MediaDeletedEvent {
     @NotNull
     UUID mediaId;
+
+    @NotNull
+    OffsetDateTime deletedAt;
 }

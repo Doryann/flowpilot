@@ -6,6 +6,7 @@ import com.doryann.flowpilot.api.model.IdentificationResponse;
 import com.doryann.flowpilot.command.api.review.CreateReviewCommand;
 import com.doryann.flowpilot.command.api.review.DeleteReviewCommand;
 import com.doryann.flowpilot.command.api.review.UpdateReviewCommand;
+import com.doryann.flowpilot.service.ReviewService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -21,10 +22,14 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class ReviewCommandController implements ReviewCommandApi {
     private final CommandGateway commandGateway;
+    private final ReviewService reviewService;
 
     @Override
     public ResponseEntity<IdentificationResponse> createReview(@Valid CreateReviewRequest createReviewRequest) {
         assert createReviewRequest.getMedia() != null;
+        if (reviewService.existsByMediaIdAndUserId(createReviewRequest.getMedia().getId(), UUID.randomUUID())) {
+            throw new IllegalStateException("User has already reviewed this media");
+        }
         log.info("Create review for media {}", createReviewRequest.getMedia().getTitle());
         UUID reviewId = UUID.randomUUID();
         commandGateway.sendAndWait(

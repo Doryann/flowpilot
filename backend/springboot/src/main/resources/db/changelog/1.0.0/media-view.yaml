@@ -53,10 +53,10 @@ databaseChangeLog:
 
               - column:
                   name: created_at
-                  type: timestamp
+                  type: timestamp with time zone
                   constraints:
                     nullable: false
 
               - column:
                   name: updated_at
-                  type: timestamp
+                  type: timestamp with time zone

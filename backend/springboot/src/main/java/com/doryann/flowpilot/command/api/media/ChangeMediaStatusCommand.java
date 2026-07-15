@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Value;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Builder
@@ -14,5 +15,7 @@ public class ChangeMediaStatusCommand {
     @NotNull
     @TargetAggregateIdentifier
     UUID mediaId;
+
+    @NotNull
     MediaStatus status;
 }

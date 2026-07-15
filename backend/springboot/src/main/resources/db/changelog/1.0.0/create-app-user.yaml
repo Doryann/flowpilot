@@ -38,6 +38,25 @@ databaseChangeLog:
                   type: varchar(512)
 
               - column:
+                  name: provider
+                  type: varchar(30)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: provider_subject
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: role
+                  type: varchar(30)
+                  defaultValue: USER
+                  constraints:
+                    nullable: false
+
+              - column:
                   name: active
                   type: boolean
                   defaultValueBoolean: true
@@ -46,13 +65,13 @@ databaseChangeLog:
 
               - column:
                   name: created_at
-                  type: timestamp
+                  type: timestamp with time zone
                   constraints:
                     nullable: false
 
               - column:
                   name: updated_at
-                  type: timestamp
+                  type: timestamp with time zone
 
         - createIndex:
             tableName: app_user
@@ -67,3 +86,8 @@ databaseChangeLog:
             columns:
               - column:
                   name: email
+
+        - addUniqueConstraint:
+            tableName: app_user
+            columnNames: provider, provider_subject
+            constraintName: uk_app_user_provider_subject

@@ -8,4 +8,5 @@ import java.util.UUID;
 
 @Repository
 public interface ReviewViewRepository extends JpaRepository<ReviewView, UUID> {
+    boolean existsByMediaIdAndUserId(UUID mediaId, UUID userId);
 }

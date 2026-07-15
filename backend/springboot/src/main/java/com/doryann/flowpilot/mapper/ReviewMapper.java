@@ -8,7 +8,7 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring", uses = DateTimeMapper.class)
+@Mapper(componentModel = "spring")
 public interface ReviewMapper {
     ReviewView toView(ReviewCreatedEvent event);
 

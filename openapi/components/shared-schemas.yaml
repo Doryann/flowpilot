@@ -7,15 +7,25 @@ components:
           type: string
           format: uuid
 
-    CreateUserBody:
+    UpdateUserProfileRequest:
       type: object
+      required:
+        - username
+        - displayName
       properties:
         username:
           type: string
+          minLength: 3
+          maxLength: 100
+
         displayName:
           type: string
-        email:
+          minLength: 1
+          maxLength: 150
+
+        avatarUrl:
           type: string
+          maxLength: 512
 
     UserDTO:
       type: object
@@ -23,15 +33,39 @@ components:
         id:
           type: string
           format: uuid
+
         username:
           type: string
+          maxLength: 100
+
         displayName:
           type: string
+          maxLength: 150
+
         email:
           type: string
+          format: email
+
         avatarUrl:
           type: string
+          maxLength: 512
+
+        role:
+          type: string
+          enum:
+            - USER
+            - ADMIN
+
+        active:
+          type: boolean
+
         createdAt:
-          type: date
+          type: string
+          format: date-time
+          readOnly: true
+
         updatedAt:
-          type: date
+          type: string
+          format: date-time
+          readOnly: true
+          nullable: true
