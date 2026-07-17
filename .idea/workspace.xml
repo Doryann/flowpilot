@@ -4,51 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f0c3cd2-ea82-4dc4-be2d-bad7c106f6f1" name="Changes" comment="Add review and user logic on springboot backend">
-      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/service/AppOidcUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/service/CurrentUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/service/ReviewService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/shared/AuthProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/shared/UserRole.java" afterDir="false" />
+    <list default="true" id="7f0c3cd2-ea82-4dc4-be2d-bad7c106f6f1" name="Changes" comment="Add authentication logic">
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/test/java/com/doryann/flowpilot/command/domain/MediaAggregateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/test/java/com/doryann/flowpilot/command/domain/ReviewAggregateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/test/java/com/doryann/flowpilot/query/projection/ReviewProjectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/springboot/src/test/java/com/doryann/flowpilot/service/AppUserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/media/ChangeMediaStatusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/media/ChangeMediaStatusCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/media/CreateMediaCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/media/CreateMediaCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/media/UpdateMediaCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/media/UpdateMediaCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/review/CreateReviewCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/review/CreateReviewCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/review/UpdateReviewCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/api/review/UpdateReviewCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/domain/MediaAggregate.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/domain/MediaAggregate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/domain/ReviewAggregate.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/command/domain/ReviewAggregate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/controller/MediaCommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/controller/MediaCommandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/controller/ReviewCommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/controller/ReviewCommandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/entity/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/entity/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/entity/MediaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/entity/MediaView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/entity/ReviewView.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/entity/ReviewView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaCreatedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaDeletedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaDeletedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaRatedEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaStatusChangedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaStatusChangedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaUpdatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/media/MediaUpdatedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/review/ReviewCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/review/ReviewCreatedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/review/ReviewDeletedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/review/ReviewDeletedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/review/ReviewUpdatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/event/review/ReviewUpdatedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/mapper/DateTimeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/mapper/MediaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/mapper/MediaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/mapper/ReviewMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/mapper/ReviewMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/repository/AppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/repository/ReviewViewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/repository/ReviewViewRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/java/com/doryann/flowpilot/service/AppUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/resources/db/changelog/1.0.0/create-app-user.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/resources/db/changelog/1.0.0/create-app-user.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/resources/db/changelog/1.0.0/media-view.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/resources/db/changelog/1.0.0/media-view.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/springboot/src/main/resources/db/changelog/1.0.0/review-view.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springboot/src/main/resources/db/changelog/1.0.0/review-view.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openapi/components/media-schemas.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/components/media-schemas.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openapi/components/review-schemas.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/components/review-schemas.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openapi/components/shared-schemas.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/components/shared-schemas.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openapi/mediapilot-core-api.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/mediapilot-core-api.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,26 +60,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.FlowpilotApplication.executor": "Debug",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/Doryann/IdeaProjects/flowpilot",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.FlowpilotApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/Doryann/IdeaProjects/flowpilot&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dlauro\IdeaProjects\flowpilot" />
@@ -207,7 +169,7 @@
       <workItem from="1783583125405" duration="891000" />
       <workItem from="1783584612523" duration="49856000" />
       <workItem from="1783927678520" duration="11036000" />
-      <workItem from="1784100134623" duration="12838000" />
+      <workItem from="1784100134623" duration="25560000" />
     </task>
     <task id="LOCAL-00002" summary="Init project - config dockerfiles">
       <option name="closed" value="true" />
@@ -257,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783688253187</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add authentication logic">
+      <option name="closed" value="true" />
+      <created>1784118883358</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1784118883358</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +257,8 @@
     <MESSAGE value="Init project Add openapi" />
     <MESSAGE value="Add media logic on springboot backend" />
     <MESSAGE value="Add review and user logic on springboot backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add review and user logic on springboot backend" />
+    <MESSAGE value="Add authentication logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add authentication logic" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
